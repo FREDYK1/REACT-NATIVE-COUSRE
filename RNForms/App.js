@@ -1,17 +1,15 @@
-import { StyleSheet, Text, View, SafeAreaView, StatusBar, TextInput } from 'react-native';
-import { useState } form 'react';
-
+import { StyleSheet, Text, View, StatusBar, SafeAreaView, TextInput } from 'react-native';
+import { useState } from "react";
  
+
 export default function App() {
 
   const [name, setName] = useState("");
 
   return (
     <SafeAreaView style={styles.container}>
-      <TextInput style={styles.input} value={name} onChangeText={setName}/>
-      <Text style={styles.text}>
-      My name is {name}. 
-      </Text>
+      <TextInput style={styles.input} value={name} onChangeText={setName} />
+      <Text style={styles.text}>My Text is {name} </Text>
     </SafeAreaView>
   );
 }
@@ -20,18 +18,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: StatusBar.currentHeight,
+    paddingTop: StatusBar.currentHeight
   },
   input: {
-    height: 40, 
+    height: 40,
     margin: 12,
     padding: 10,
     borderWidth: 1,
   },
   text: {
-    fontSize: 34,
+    fontSize: 20,
     padding: 10,
   }
 });
